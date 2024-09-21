@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #FFCB05;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 150px); /*4 columnas de cartas*/
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transform-style:preserve-3d;
+    transition: transform 0.4s;
+    transform: rotateY(0deg);
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    display: none;
+}
+
+.card.flipped img {
+display: block;
+backface-visibility: visible;
+
+    .card hover{
+        width: 100%;
+        height: 100%;
+        background-color: #999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        z-index: 1;
+        border-radius: 10px;
+        transition: opacity 0.4s ease;
+    }
+}
